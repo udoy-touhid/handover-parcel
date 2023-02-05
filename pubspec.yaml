@@ -1,0 +1,31 @@
+name: handover
+description: An demo flutter parcel tracker app for showcasing realtime location tracking
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.0-444.2.beta <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  location: ^4.2.0
+  google_maps_flutter: ^2.2.3
+  firebase_core: ^2.4.1
+  firebase_database: ^10.0.9
+  status_change: ^2.0.0
+  flutter_rating_bar: ^4.0.1
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
