@@ -11,7 +11,8 @@ class StatusBottomSheet extends StatelessWidget {
 
   final int selectedDeliveryStatusIndex;
 
-  bool get showRatingDialog => currentUser?.userType != UserType.driver && appStatus?.deliveryStatus == DeliveryStatus.done;
+  bool get showRatingDialog =>
+      currentUser?.userType != UserType.driver && appStatus?.deliveryStatus == DeliveryStatus.done;
 
   @override
   Widget build(BuildContext context) {

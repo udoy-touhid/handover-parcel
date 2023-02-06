@@ -97,8 +97,14 @@ class _MyAppState extends State<HomeView> {
                 fontSize: 18,
                 fontWeight: isSelected ? FontWeight.w700 : FontWeight.w400,
                 color: isSelected ? Colors.red : Colors.black)),
-        const SizedBox(width: 10,),
-        Image.asset("assets/images/${UserType.values[index].name}_marker.png", width: 40,height: 40,)
+        const SizedBox(
+          width: 10,
+        ),
+        Image.asset(
+          "assets/images/${UserType.values[index].name}_marker.png",
+          width: 40,
+          height: 40,
+        )
       ],
     );
   }

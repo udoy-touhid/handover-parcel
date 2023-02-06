@@ -66,8 +66,8 @@ class VerticalStepperView extends StatelessWidget {
                     color: isLastItem
                         ? invisibleColor
                         : isPrevItemSelected
-                        ? invertedColor
-                        : color)),
+                            ? invertedColor
+                            : color)),
 
             //circle & text
             Container(

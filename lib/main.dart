@@ -3,7 +3,6 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:handover/model/status.dart';
 import 'package:handover/ui/home/home_view.dart';
-import 'package:handover/ui/map/map_view.dart';
 import 'package:handover/utils/colors.dart';
 import 'package:handover/utils/fonts.dart';
 

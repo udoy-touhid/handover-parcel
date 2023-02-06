@@ -8,10 +8,12 @@ import 'package:handover/model/user.dart';
 class NotificationManager {
   BuildContext context;
   var isNotificationShow = false;
+
+  //todo these should be 5 and 0.1 respectively. Assigned these for demonstration purpose
   var nearbyDistance = 50;
   var arrivalDistance = 5;
 
-  NotificationManager(this.context) {}
+  NotificationManager(this.context);
 
   handleUpdates() {
     if (isNotificationShow) {
@@ -30,8 +32,8 @@ class NotificationManager {
       } else {
         notifyUser("Driver arrived", "Deliver the parcel");
       }
-    }
-    else if (appStatus?.deliveryStatus == DeliveryStatus.ongoingDelivery && userType == UserType.receiver) {
+    } else if (appStatus?.deliveryStatus == DeliveryStatus.ongoingDelivery &&
+        userType == UserType.receiver) {
       var distance = calculateDistance(currentUser?.latitude, currentUser?.longitude,
           appStatus?.driver.latitude, appStatus?.driver.longitude);
 
@@ -48,7 +50,6 @@ class NotificationManager {
   }
 
   notifyUser(String title, String description) {
-
     var dialog = showDialog(
         context: context,
         builder: (_) => AlertDialog(

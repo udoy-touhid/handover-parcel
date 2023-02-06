@@ -12,18 +12,17 @@ Future<Uint8List> getBytesFromAsset(String path, int width) async {
   return (await fi.image.toByteData(format: ui.ImageByteFormat.png))!.buffer.asUint8List()!;
 }
 
-
-Future<Marker> getMarkerForUser(User user) async{
+Future<Marker> getMarkerForUser(User user) async {
   var markerSize = 130;
-  if(user.userType == UserType.driver) {
+  if (user.userType == UserType.driver) {
     markerSize = 80;
   }
   markerSize = 100;
-  var markerImage = await getBytesFromAsset("assets/images/${user.userType.name}_marker.png", markerSize);
+  var markerImage =
+      await getBytesFromAsset("assets/images/${user.userType.name}_marker.png", markerSize);
 
   return Marker(
       markerId: MarkerId(user.userType.name),
-      position: LatLng(user.latitude,user.longitude),
+      position: LatLng(user.latitude, user.longitude),
       icon: BitmapDescriptor.fromBytes(markerImage));
-
 }

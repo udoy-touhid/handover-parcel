@@ -12,7 +12,7 @@ const colorSecondaryNormal = "#0891B2";
 const colorLightNormal = "#334155";
 
 extension ColorExtension on String {
-   Color toColor() {
+  Color toColor() {
     var hexColor = replaceAll("#", "");
     hexColor = "FF$hexColor";
     return Color(int.parse("0x$hexColor"));
